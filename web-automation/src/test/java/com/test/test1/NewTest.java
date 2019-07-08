@@ -45,9 +45,10 @@ public class NewTest {
 		 File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		  // now copy the  screenshot to desired location using copyFile //method
-		 FileUtils.copyFile(src, new File("C:/Users/Karthick/Desktop/Selenium/screenshots/" + LocalDateTime.now() + ".jpg"));
+		// FileUtils.copyFile(src, new File("C:/Users/Karthick/Desktop/Selenium/screenshots/" + LocalDateTime.now() + ".jpg"));
 		 
 
+		 FileUtils.copyFile(src, new File("C:/Users/Karthick/Desktop/Selenium/screenshots/" + "ss" + ".jpg"));
 	      //  TakesScreenshot scrShot =((TakesScreenshot)webdriver);
 
 	        //        File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
