@@ -31,6 +31,7 @@ public class Testone {
 		
 		takeSnapShot(driver);
 		
+		
 		driver.manage().deleteAllCookies();
 		
 		driver.quit();
