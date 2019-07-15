@@ -1,10 +1,15 @@
 package com.test.test1;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -64,6 +69,20 @@ public class NewTest {
 
 	                
 	              //  FileUtils.copyFile(SrcFile, DestFile);
+	 }
+	 
+	 
+	 public void getinputdata() throws Exception {
+		 
+		 File datasheet = new File("C:\\Users\\Karthick\\git\\Test1\\web-automation\\Test Data sheet.xslx");
+		 FileInputStream fis = new  FileInputStream(datasheet);
+		 XSSFWorkbook wb = new XSSFWorkbook(fis);
+		 XSSFSheet sh = wb.getSheet("Sheet1");
+		 int lrow = sh.getLastRowNum();  
+		 
+		 for(int i=0;i<lrow;i++) {
+			 
+		 }
 	 }
 
 }
